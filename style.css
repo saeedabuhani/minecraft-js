@@ -197,3 +197,13 @@ body {
   letter-spacing: 2px;
 }
 .btn-play:hover { background: #57b03a; }
+
+/* Responsive */
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .toolbar h2 { width: 100%; margin-bottom: 0; }
+  .toolbar .tool { width: auto; flex: 1; min-width: 80px; margin-bottom: 0; }
+  .inventory { flex-direction: row; flex-wrap: wrap; }
+  .title { font-size: 1rem; }
+}
