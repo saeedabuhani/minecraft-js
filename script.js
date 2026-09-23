@@ -52,6 +52,7 @@ const Game = {
       const tile = e.target.closest(".tile");
       if (tile) this.clickTile(tile);
     });
+    document.getElementById("reset-btn").addEventListener("click", () => this.resetWorld());
     this.inventoryEl.addEventListener("click", (e) => {
       const slot = e.target.closest(".inv-item");
       if (slot) this.selectItem(slot.dataset.type);
@@ -158,6 +159,17 @@ const Game = {
       slot.innerHTML = `<span class="inv-tile tile-${type}"></span><span class="inv-name">${type}</span><span class="inv-count">${this.inventory[type]}</span>`;
       this.inventoryEl.appendChild(slot);
     });
+  },
+
+  resetWorld() {
+    this.loadOriginalWorld();
+    this.inventory = {};
+    this.selectedTool = null;
+    this.selectedItem = null;
+    document.querySelectorAll(".tool").forEach((btn) => btn.classList.remove("selected"));
+    this.renderWorld();
+    this.renderInventory();
+    this.setMessage("World reset. Pick a tool, then click a tile.");
   },
 
   loadOriginalWorld() {
