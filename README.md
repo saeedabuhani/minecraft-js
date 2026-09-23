@@ -62,5 +62,4 @@ Keeping all state in one `Game` object and using CSS classes for every visual st
 easier to follow and to debug. Committing after every feature helped me track progress.
 
 
-## Live demo
-https://saeedabuhani.github.io/minecraft-js/
+
