@@ -73,6 +73,61 @@ body {
 .tile-tree { background: #5b3a1e; }
 .tile-leaves { background: #2f8f2f; }
 
+/* Tools */
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px 4px;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: var(--panel-light);
+  border: 3px solid #000;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.1s;
+}
+.tool:hover { background: #7a5a36; }
+.tool-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: #222;
+  border: 2px solid #000;
+}
+.tool.selected {
+  background: var(--accent);
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px #fff;
+}
+
+.tile.wrong { animation: shake 0.3s; }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); background-color: #d33; }
+  75% { transform: translateX(3px); background-color: #d33; }
+}
+
+.tile.fade-in { animation: fadeIn 0.35s; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.tile.fade-out { animation: fadeOut 0.25s forwards; }
+@keyframes fadeOut {
+  to { opacity: 0; transform: scale(0.5); }
+}
+
+.message { margin-top: 12px; font-size: 0.85rem; min-height: 3em; }
+
 .btn {
   font: inherit;
   color: var(--text);
