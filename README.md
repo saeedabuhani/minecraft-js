@@ -61,5 +61,4 @@ This assignment was a good exercise in separating structure (HTML), visuals (CSS
 Keeping all state in one `Game` object and using CSS classes for every visual state made the code
 easier to follow and to debug. Committing after every feature helped me track progress.
 
-## Live demo
-https://saeedabuhani.github.io/minecraft-js/
+
