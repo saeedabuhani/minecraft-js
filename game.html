@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft JS - Play</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+  <header class="topbar">
+    <a class="btn btn-small" href="index.html">Home</a>
+    <h1 class="title">Minecraft JS</h1>
+    <button id="reset-btn" class="btn btn-small btn-danger">Reset World</button>
+  </header>
+
+  <main class="layout">
+    <aside id="toolbar" class="panel toolbar">
+      <h2>Tools</h2>
+    </aside>
+
+    <section id="world" class="world" aria-label="World"></section>
+
+    <aside class="panel inventory-panel">
+      <h2>Inventory</h2>
+      <div id="inventory" class="inventory"></div>
+      <p id="message" class="message">Pick a tool, then click a tile.</p>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
