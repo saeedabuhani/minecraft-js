@@ -36,7 +36,7 @@ No installation is needed.
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/saeedabuhani/minecraft-js.git
+   https://github.com/saeedabuhani/minecraft-js.git
    cd minecraft-js
    ```
 2. Open `index.html` in a browser, or start a local server:
